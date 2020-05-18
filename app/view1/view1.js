@@ -9,6 +9,11 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function() {
-
+.controller('View1Ctrl', ['$scope', 'dummyFactory', function($scope, dummyFactory) {
+  dummyFactory.getData()
+      .then(function(response) {
+        $scope.prova = JSON.stringify(response.data);
+      }, function(err) {
+        console.error(err);
+      })
 }]);
