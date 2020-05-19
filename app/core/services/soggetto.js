@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('myApp.service', [])
-.factory('dummyFactory', ['$http', '$q', function($http, $q) {
+angular.module('myApp.soggetto-service', [])
+.factory('soggettoFactory', ['$http', '$q', function($http, $q) {
   return {
     getData: function() {
         var deferred = $q.defer();
